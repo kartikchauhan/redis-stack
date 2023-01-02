@@ -1,0 +1,19 @@
+{
+  "name": "redis-stack",
+  "version": "1.0.0",
+  "description": "fun project on redis-stack ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redis",
+    "redis-stack"
+  ],
+  "author": "Kartik Chauhan",
+  "license": "ISC",
+  "dependencies": {
+    "redis-om": "^0.3.6"
+  },
+  "type": "module"
+}
