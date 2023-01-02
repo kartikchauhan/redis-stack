@@ -15,7 +15,7 @@ album.year = 2012
 album.genres = ['Alternative rock', 'Alternative/Indie', 'Metal']
 album.multipleArtists = true
 
-const id = await albumRepository.save(album)
+const albumId = await albumRepository.save(album)
 
 /**
  * Meta Info
@@ -28,8 +28,28 @@ const id = await albumRepository.save(album)
     4) "genres"
     5) "multipleArtists"
     JSON.GET Album:01GNT1AQ852JB17MSSQQ9K6G0Z artist => "\"Linkin Park\""
+    JSON.DEL Album:01GNT20V49X9EZJNNPVHKA3ZEK => (integer) 1
  */
+
 // console.log(album.entityId) // 01GNT1AQ852JB17MSSQQ9K6G0Z
-// console.log(id) // 01GNT1AQ852JB17MSSQQ9K6G0Z
+// console.log(albumId) // 01GNT1AQ852JB17MSSQQ9K6G0Z
+
+const studio = studioRepository.createEntity({
+    name: "Bad Racket Recording Studio",
+    city: "Cleveland",
+    state: "Ohio",
+    location: { longitude: -81.6764187, latitude: 41.5080462 },
+    established: new Date('2010-12-27')
+})
+
+/**
+ * Meta Info
+ * JSON.GET Studio:01GNT20V4KETCAWDNNVMJA50E5 location => "\"-81.6764187,41.5080462\""
+ * JSON.GET Studio:01GNT20V4KETCAWDNNVMJA50E5 established => "1293408000"
+ */
+
+const studioId = await studioRepository.save(studio)
+
+// console.log(studioId); // 01GNT20V4KETCAWDNNVMJA50E5
 
 await client.close()
