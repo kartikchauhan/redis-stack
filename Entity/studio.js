@@ -1,4 +1,4 @@
-import { Entity } from "redis-om"
+import { Entity, Schema } from "redis-om"
 
 class Studio extends Entity { }
 
@@ -9,3 +9,5 @@ const studioSchema = new Schema(Studio, {
     location: { type:  'point' },
     established: { type: 'date' }
 })
+
+export { studioSchema }
