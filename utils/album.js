@@ -1,4 +1,4 @@
-import { albumSchema } from '../Entity/index.js'
+import { albumSchema } from '../entity/index.js'
 
 import RepositoryUtil from './repository.js'
 

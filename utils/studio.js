@@ -1,4 +1,4 @@
-import { studioSchema } from '../Entity/index.js'
+import { studioSchema } from '../entity/index.js'
 import RepositoryUtil from './repository.js'
 
 class StudioUtil extends RepositoryUtil {
