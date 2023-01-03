@@ -22,6 +22,8 @@ class StudioUtil extends RepositoryUtil {
         const studioId = await studioRepository.save(studio)
         
         console.log(studioId); // 01GNT20V4KETCAWDNNVMJA50E5
+
+        return studioId
     }
 }
 

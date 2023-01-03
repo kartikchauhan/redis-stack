@@ -35,6 +35,8 @@ class AlbumUtil extends RepositoryUtil {
 
         console.log(album.entityId) // 01GNT1AQ852JB17MSSQQ9K6G0Z
         console.log(albumId) // 01GNT1AQ852JB17MSSQQ9K6G0Z
+
+        return albumId
     }
 
     async get(client) {
