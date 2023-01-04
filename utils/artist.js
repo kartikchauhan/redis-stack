@@ -20,7 +20,24 @@ class ArtistUtil extends RepositoryUtil {
         const artistRepository = this.getRepository(client, artistSchema)
 
         return artistRepository.fetch(id)
+    }
 
+    async search(client) {
+        const artistRepository = this.getRepository(client, artistSchema)
+
+        const result = await artistRepository.search()
+            .where('name').equals('Mike Shinoda')
+            .return
+            .all()
+
+        console.log('\n--- result', JSON.stringify(result, null, 4));
+        console.log('\n');
+    }
+
+    async createIndex(client) {
+        const artistRepository = this.getRepository(client, artistSchema)
+
+        await artistRepository.createIndex()
     }
 }
 
